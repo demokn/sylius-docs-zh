@@ -17,7 +17,7 @@
 ** Sylius入门
 
    对于想要了解Sylius最重要功能，快速了解定制功能并在几个小时内开设第一家Sylius商店的Sylius新手来说，
-   这是必不可少的指南。
+   这是必不可少的 [[file:getting-started-with-sylius/index.org][指南]]。
 
    - [[file:getting-started-with-sylius/installation.org][安装]]
    - [[file:getting-started-with-sylius/basic-configuration.org][基本配置]]
@@ -35,7 +35,15 @@
    在这里，您将找到Sylius平台中使用的所有概念。
    [[file:book/index.org][本书]] 有助于了解Sylius的工作原理。
 
-   TODO: 插入图片
+   [[_images/introduction.png]]
+   [[_images/installation.png]]
+   [[_images/architecture.png]]
+   [[_images/configuration.png]]
+
+   [[_images/customers.png]]
+   [[_images/products.png]]
+   [[_images/carts_and_orders.png]]
+   [[_images/themes.png]]
 
 ** 定制指南
 

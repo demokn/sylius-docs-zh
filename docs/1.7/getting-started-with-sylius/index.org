@@ -1,0 +1,21 @@
+* Sylius入门
+  [[https://sylius.com/online-course/][Sylius入门-在线课程（8h） 现在学习]]
+
+  本教程面向Sylius新手，他们希望快速检出我们的系统-查看基本配置，进行一些小的自定义，
+  并能够在其新的网上商店中销售第一批产品。它显示了从一个想法（“我想在线销售一些东西”）
+  到第一个结果（“我可以在线销售一些东西！”）的最快，最简单的方法。
+
+  - [[file:installation.org][安装]]
+  - [[file:basic-configuration.org][基本配置]]
+  - [[file:shipping-and-payment.org][运输和付款]]
+  - [[file:first-product.org][第一个产品]]
+  - [[file:shop-customizations.org][店铺定制]]
+  - [[file:custom-business-logic.org][定制业务逻辑]]
+  - [[file:plugin-installation.org][插件安装]]
+  - [[file:deployment.org][部署]]
+  - [[file:summary.org][总结]]
+
+  #+begin_warning
+  请注意，本指南是为开发人员编写的！为了正确理解每一章，您至少需要对面向对象的编程和PHP语言有一个模糊的想法。
+  [[https://symfony.com/doc/current/index.html][Symfony]] 的经验也是需要的。
+  #+end_warning

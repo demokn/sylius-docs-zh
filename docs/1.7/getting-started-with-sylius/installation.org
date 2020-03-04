@@ -1,0 +1,13 @@
+* 安装
+
+  因此，您想尝试与Sylius创建在线商店吗？
+  好极了！第一步是最重要的一步，所以让我们开始通过Composer安装Sylius项目。
+  我们将使用Sylius的最新稳定版本 =1.7= 。
+
+** 安装前
+
+   在安装之前，您的本地环境需要满足一些先决条件（不是很多）。
+
+   [[file:../_images/installation_checklist.png]]
+
+   有关详细信息，看看 [[file:book/installation/requirements.org][这章]] 中的图书。
