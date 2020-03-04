@@ -22,18 +22,18 @@
    - [[file:getting-started-with-sylius/installation.org][安装]]
    - [[file:getting-started-with-sylius/basic-configuration.org][基本配置]]
    - [[file:getting-started-with-sylius/shipping-and-payment.org][运输和付款]]
-   - [[file:getting-started-with-sylius/first-product.org][第一产品]]
+   - [[file:getting-started-with-sylius/first-product.org][第一个产品]]
    - [[file:getting-started-with-sylius/shop-customizations.org][店铺定制]]
    - [[file:getting-started-with-sylius/custom-business-logic.org][定制业务逻辑]]
    - [[file:getting-started-with-sylius/plugin-installation.org][插件安装]]
-   - [[file:getting-started-with-sylius/deployment.org][部署方式]]
-   - [[file:getting-started-with-sylius/summary.org][摘要]]
+   - [[file:getting-started-with-sylius/deployment.org][部署]]
+   - [[file:getting-started-with-sylius/summary.org][总结]]
 
-** 这本书
+** 本书
 
    开发人员指南，以充分利用Sylius的灵活性。
    在这里，您将找到Sylius平台中使用的所有概念。
-   该书有助于了解Sylius的工作原理。
+   [[file:book/index.org][本书]] 有助于了解Sylius的工作原理。
 
    TODO: 插入图片
 
