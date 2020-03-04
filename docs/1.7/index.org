@@ -1,0 +1,141 @@
+* Sylius 文档
+
+  [[https://sylius.com/][Sylius]] 是基于 [[http://symfony.com/][Symfony Framework]] 的 PHP 的现代电子商务解决方案 。
+
+  #+begin_note
+  本文档假定您具有Symfony框架的工作知识。如果您不熟悉Symfony，请先阅读Symfony文档中的 [[http://symfony.com/doc/current/quick_tour][快速入门]] 。
+  #+end_note
+
+  #+begin_tip
+  The Book, Customization Guide, REST API Reference, Cookbook, Contribution Guide and Behat Guide
+  are chapters describing the usage of the whole Sylius platform,
+  on the examples for Sylius-Standard distribution.
+
+  有关仅使用某些Sylius捆绑包(bundles)的提示，请访问“捆绑包和组件(Bundles and Components)”文档。
+  #+end_tip
+
+** Sylius入门
+
+   对于想要了解Sylius最重要功能，快速了解定制功能并在几个小时内开设第一家Sylius商店的Sylius新手来说，
+   这是必不可少的指南。
+
+   - [[file:getting-started-with-sylius/installation.org][安装]]
+   - [[file:getting-started-with-sylius/basic-configuration.org][基本配置]]
+   - [[file:getting-started-with-sylius/shipping-and-payment.org][运输和付款]]
+   - [[file:getting-started-with-sylius/first-product.org][第一产品]]
+   - [[file:getting-started-with-sylius/shop-customizations.org][店铺定制]]
+   - [[file:getting-started-with-sylius/custom-business-logic.org][定制业务逻辑]]
+   - [[file:getting-started-with-sylius/plugin-installation.org][插件安装]]
+   - [[file:getting-started-with-sylius/deployment.org][部署方式]]
+   - [[file:getting-started-with-sylius/summary.org][摘要]]
+
+** 这本书
+
+   开发人员指南，以充分利用Sylius的灵活性。
+   在这里，您将找到Sylius平台中使用的所有概念。
+   该书有助于了解Sylius的工作原理。
+
+   TODO: 插入图片
+
+** 定制指南
+
+   想要使Sylius适应您的个人业务需求时， [[file:customization/index.org][自定义指南]] 会很有帮助。
+
+   - [[file:customization/model.org][定制模型]]
+   - [[file:customization/form.org][定制表格]]
+   - [[file:customization/repository.org][自定义存储库]]
+   - [[file:customization/factory.org][定制工厂]]
+   - [[file:customization/controller.org][定制控制器]]
+   - [[file:customization/validation.org][定制验证]]
+   - [[file:customization/menu.org][自定义菜单]]
+   - [[file:customization/template.org][自定义模板]]
+   - [[file:customization/translation.org][定制翻译]]
+   - [[file:customization/flash.org][自定义闪光灯]]
+   - [[file:customization/state_machine.org][定制状态机]]
+   - [[file:customization/grid.org][自定义网格]]
+   - [[file:customization/fixtures.org][定制 Fixtures]]
+   - [[file:customization/fixture_suites.org][定制 Fixture Suites]]
+   - [[file:customization/tips_and_tricks.org][提示与技巧]]
+
+** 主题指南
+
+   尝试为Sylius商店开发自定义布局时， [[file:theming/index.org][主题指南]] 非常有用。
+
+   - [[file:theming/webpack.org][在Sylius中使用Webpack Encore]]
+   - [[file:theming/bootstrap_theme.org][用BootstrapTheme主题化]]
+
+** 插件开发指南
+
+   如果您想知道如何与开源社区共享Sylius拥有/想要拥有的精妙功能，
+   可以在此找到有关插件开发的全面指南，从构思到与全世界共享插件。
+   请记住，您可以使用插件中的所有 [[file:customization/index.org][自定义技术]] 。
+
+   - [[file:plugin-development-guide/index.org][插件开发指南]]
+   - [[file:plugin-development-guide/idea.org][想法]]
+   - [[file:plugin-development-guide/installation.org][如何开始？]]
+   - [[file:plugin-development-guide/naming.org][命名变更]]
+   - [[file:plugin-development-guide/specification.org][规格]]
+   - [[file:plugin-development-guide/implementation.org][实作]]
+   - [[file:plugin-development-guide/summary.org][总结]]
+
+** Cookbook
+   [[file:cookbook/index.org][Cookbook]] 是针对特定需求的特定解决方案的集合。
+
+** REST API 指引
+   [[file:api/index.org][该API指南]] 涵盖了Sylius平台的REST API。
+
+   - [[file:api/introduction.org][Sylius REST API简介]]
+   - [[file:api/authorization.org][授权]]
+   - [[file:api/admin_users.org][管理员用户API]]
+   - [[file:api/carts.org][购物车API]]
+   - [[file:api/channels.org][频道API]]
+   - [[file:api/checkouts.org][结帐API]]
+   - [[file:api/countries.org][国家API]]
+   - [[file:api/currencies.org][货币API]]
+   - [[file:api/customers.org][客户API]]
+   - [[file:api/exchange_rates.org][汇率API]]
+   - [[file:api/locales.org][语言环境API]]
+   - [[file:api/orders.org][订单API]]
+   - [[file:api/payment_methods.org][付款方式API]]
+   - [[file:api/payments.org][付款API]]
+   - [[file:api/product_attributes.org][产品属性API]]
+   - [[file:api/product_options.org][产品选项API]]
+   - [[file:api/product_reviews.org][产品评论API]]
+   - [[file:api/product_variants.org][产品变体API]]
+   - [[file:api/products.org][产品API]]
+   - [[file:api/promotion_coupons.org][促销优惠券API]]
+   - [[file:api/promotions.org][促销API]]
+   - [[file:api/provinces.org][省API]]
+   - [[file:api/shipments.org][发货API]]
+   - [[file:api/shipping_categories.org][运送类别API]]
+   - [[file:api/shipping_methods.org][运送方式API]]
+   - [[file:api/tax_categories.org][税种API]]
+   - [[file:api/tax_rates.org][税率API]]
+   - [[file:api/taxons.org][分类API]]
+   - [[file:api/zones.org][区域API]]
+   - [[file:api/sorting_and_filtration.org][排序和筛选]]
+
+** BDD指南
+   在 [[file:bdd/index.org][BDD指南]] 中，您将学习如何使用Behat编写干净且可重用的功能，上下文和页面。
+
+   - [[file:bdd/basic-usage.org][基本用法]]
+   - [[file:bdd/how-to-add-new-context.org][如何添加新的上下文？]]
+   - [[file:bdd/how-to-add-new-page.org][如何添加新的页面对象？]]
+   - [[file:bdd/how-to-define-new-suite.org][如何定义新套件？]]
+   - [[file:bdd/how-to-use-transformers.org][如何使用变压器？]]
+
+** 贡献指南
+   Sylius的 [[file:contributing/index.org][贡献指南]]。
+
+   - [[file:contributing/code/index.org][贡献代码]]
+   - [[file:contributing/documentation/index.org][贡献文档]]
+   - [[file:contributing/translations/index.org][贡献翻译]]
+
+** 支持
+   Sylius的 [[file:support/index.org][支持部分]]。
+
+** 组件和捆绑包
+   独立使用 [[file:components_and_bundles/index.org][所有Sylius组件和捆绑包]] 时有用的文档。
+
+   - [[file:components_and_bundles/components/index.org][Sylius组件文档]]
+   - [[file:components_and_bundles/bundles/index.org][Sylius捆绑包文档]]
