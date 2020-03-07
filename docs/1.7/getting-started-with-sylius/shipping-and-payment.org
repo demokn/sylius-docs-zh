@@ -1,0 +1,33 @@
+* 运送和付款
+  基本配置已经完成。
+  现在，我们可以继续让潜在客户购买我们的商品。
+  在结帐过程中，他们应该能够定义他们希望如何运送订单以及如何付款。
+
+** 运送方式
+   Sylius允许根据运送地址（在这里必不可少 *区域(Zone)* 的概念）或某些特定 *运送类别* 的隶属关系，
+   配置不同的运送方式。让我们来创建一个名为 “FedEx” 的送货方式，整笔订单的运费为10美元。
+
+   [[../_images/getting-started-with-sylius/shipping-method.png]]
+
+** 付款方法
+   客户还应该能够选择他们愿意支付的方式。至少需要一种付款方式-我们将其设置为“货到付款”。
+   在创建之前，我们需要指定付款方式网关，这是一种处理付款的方式
+   （默认情况下支持 /Offline/， /PayPal Express Checkout/ 和 /Stripe/ ）。
+
+   网关选择：
+
+   [[../_images/getting-started-with-sylius/gateways.png]]
+
+   付款方式创建：
+
+   [[../_images/getting-started-with-sylius/payment-method-creation.png]]
+
+   #+begin_attention
+   嘘！如果您查看一些 [[https://sylius.com/plugins][Sylius插件]] ，则可以找到与更多支付网关的集成。
+   #+end_attention
+
+   太棒了！剩下的唯一事情就是添加一些产品，我们可以去购物了！
+
+** 学习更多
+   - [[file:../book/orders/shipments.org][运送]]
+   - [[file:../book/orders/payments.org][支付]]

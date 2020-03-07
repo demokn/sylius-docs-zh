@@ -1,0 +1,27 @@
+* 第一个产品
+  我们转到后台管理员面板中最重要的部分之一 - 产品管理。
+  如您所见， 菜单中的 *目录(Catalog)* 部分已得到相当广泛的扩展，但目前，我们将仅专注于产品创建。
+
+  您可以在创建产品之前选择一种 /简单/ 或 /可配置/ 的产品类型。
+  简而言之 - /简单/ 是一个产品只有一个版本， /可配置/ 是客户可以选择一个产品其中的一些选项（例如尺寸或颜色）。
+  有关更多信息，请查看 *The Book* 中的 [[file:../book/products/products.org][产品]] 一章。
+
+  [[../_images/getting-started-with-sylius/product-types.png]]
+
+  在产品创建期间，您可以决定其许多特征。它要多少钱？它是需要运输的物理产品吗？是否应该在库存系统中对其进行跟踪？
+  在哪个频道上可以使用？结帐时是否应加一些税？稍后花点时间探索这些选项，现在让我们仅填充最关键的数据：
+
+  [[../_images/getting-started-with-sylius/product-creation.png]
+
+** 总结
+   太好了，第一阶段完成了！整个结帐过程在 [[file:../book/orders/checkout.org][文档的此部分]] 中进行了详细描述。
+
+   [[../_images/getting-started-with-sylius/checkout-summary.png]]
+
+   现在，我们可以转到教程的一些更高级的部分 - Sylius 提供定制化特性，并将其部署到服务器中，以使其可被全世界访问。
+
+** 学习更多
+   - [[file:../book/products/prodducts.org][产品]]
+   - [[file:../book/products/taxons.org][分类]]
+   - [[file:../book/products/inventory.org][库存]]
+   - [[file:../book/orders/taxation.org][税收]]
