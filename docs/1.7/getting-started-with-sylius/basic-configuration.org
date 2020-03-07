@@ -7,20 +7,20 @@
    渠道包含有关商店的最基本数据，例如可用的区域设置，货币，商店账单数据等。
    您可以修改渠道的配置：
 
-   [[file:../_images/channel.png]]
+   [[../_images/getting-started-with-sylius/channel.png]]
 
 ** 区域(Locale)
    Sylius支持多种层级的国际化-您可以轻松地在商店中添加新的语言环境，以使您的客户以所需的语言来浏览它。
    根据安装命令中的设置，当前唯一可用的 *语言环境* 应该是 *英语（美国）* 。
    这将是您商店的基本语言环境，因此必须至少使用英文名称来创建所有产品或分类单元等。
 
-   [[../_images/locale.png]]
+   [[../_images/getting-started-with-sylius/locale.png]]
 
 ** 货币(Currency)
    每个渠道只能使用一种 *基础货币* 运行，但是价格可以用 *多个币种* 显示，两者之间的比率由 *汇率* 配置。
    目前，唯一可用的货币应该是 *USD* ，它也是由 =sylius:install= 命令创建的。
 
-   [[../_images/currency.png]]
+   [[../_images/getting-started-with-sylius/currency.png]]
 
    #+begin_note
    先前的所有数据都是由安装命令创建的 - 但您还应该在存储配置中添加另外两件事，以使其能够100％正常工作。
@@ -33,20 +33,20 @@
 
    添加国家：
 
-   [[../_images/country-creation.png]]
+   [[../_images/getting-started-with-sylius/country-creation.png]]
 
    索引页面上显示的已添加国家：
 
-   [[../_images/country-index.png]]
+   [[../_images/getting-started-with-sylius/country-index.png]]
 
 ** 区域(Zone)
    最后的配置步骤是创建区域。出于各种原因使用它们，例如运输和收税操作，并且可以包含国家，省或其他区域。
 
-   [[../_images/zones-types.png]]
+   [[../_images/getting-started-with-sylius/zones-types.png]]
 
    让我们为系统中的唯一国家（也就是 /美国/ ）创建一个名为 /美国/ 的基本区域。这样就完成了基本的商店配置！
 
-   [[../_images/zone-creation.png]]
+   [[../_images/getting-started-with-sylius/zone-creation.png]]
 
 ** 学习更多
    - [[file:../book/configuration/channels.org][渠道]]
