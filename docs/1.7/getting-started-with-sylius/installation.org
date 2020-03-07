@@ -36,11 +36,11 @@
    此命令将为您做几件事-前两个步骤是检查您的环境是否满足技术要求，并设置项目数据库。
    系统还会询问您是否要将默认的夹具(译者注:测试数据)加载到数据库中-假设“否”，我们将手动配置存储。
 
-   [[../_images/installation1.png]]
+   [[../_images/getting-started-with-sylius/installation1.png]]
 
    一定要注意第三安装步骤。您可以在其中配置默认​​的管理员帐户，该帐户以后将用于访问Sylius管理面板。
 
-   [[../_images/installation2.png]]
+   [[../_images/getting-started-with-sylius/installation2.png]]
 
    为了从基于Sylius SemanticUI的视图中获得乐趣，您应该使用它 =yarn= 来加载我们的资源。
 
