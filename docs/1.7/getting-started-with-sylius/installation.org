@@ -8,6 +8,61 @@
 
    在安装之前，您的本地环境需要满足一些先决条件（不是很多）。
 
-   [[file:../_images/installation_checklist.png]]
+   [[../_images/installation_checklist.png]]
 
-   有关详细信息，看看 [[file:book/installation/requirements.org][这章]] 中的图书。
+   有关更多细节，可以看看书中的 [[file:../book/installation/requirements.org][这个章节]] 。
+
+** 项目设置
+   在本地计算机上安装Sylius的最简单方法是使用以下命令：
+
+   #+begin_src sh
+     composer create-project sylius/sylius-standard MyFirstShop
+   #+end_src
+
+   它将创建一个 =MyFirstShop= 目录，其中包含一个全新的Sylius应用程序。
+
+   #+begin_warning
+   注意！下一步包括数据库设置。
+   它将使用环境变量在文件中（ =.env= 是最常见的一种方式）设置数据库凭据（用户名，密码和数据库名）。
+   #+end_warning
+
+   要启动Sylius应用程序，必须设置初始数据：管理员帐户和基本语言环境。运行Sylius安装命令来执行此操作。
+
+   #+begin_src sh
+     cd MyFirstShop
+     bin/console sylius:install
+   #+end_src
+
+   此命令将为您做几件事-前两个步骤是检查您的环境是否满足技术要求，并设置项目数据库。
+   系统还会询问您是否要将默认的夹具(译者注:测试数据)加载到数据库中-假设“否”，我们将手动配置存储。
+
+   [[../_images/installation1.png]]
+
+   一定要注意第三安装步骤。您可以在其中配置默认​​的管理员帐户，该帐户以后将用于访问Sylius管理面板。
+
+   [[../_images/installation2.png]]
+
+   为了从基于Sylius SemanticUI的视图中获得乐趣，您应该使用它 =yarn= 来加载我们的资源。
+
+   #+begin_src sh
+     yarn install
+     yarn build
+   #+end_src
+
+   好了！您已经准备好启动空的基于Sylius的网络商店。
+
+** 启动应用程序
+
+   出于测试原因，启动应用程序的最快方法是使用Symfony二进制文件。可以从 [[https://symfony.com/download][这里]] 下载。
+   让我们也开始先从管理员面板浏览该应用程序。
+
+   #+begin_src sh
+     symfony serve
+     open http://127.0.0.1:8000/admin
+   #+end_src
+
+   太棒了！您离目标更近一步了。
+   让我们对您的应用程序进行一些配置，以使某些将来的客户可以使用它。
+
+** 学习更多
+   - [[file:../book/installation/index.org][The Book 中的安装章节]]
