@@ -12,7 +12,7 @@
 ** 付款方法
    客户还应该能够选择他们愿意支付的方式。至少需要一种付款方式-我们将其设置为“货到付款”。
    在创建之前，我们需要指定付款方式网关，这是一种处理付款的方式
-   （默认情况下支持 /Offline/， /PayPal Express Checkout/ 和 /Stripe/ ）。
+   （默认情况下支持 /Offline/ ， /PayPal Express Checkout/ 和 /Stripe/ ）。
 
    网关选择：
 
