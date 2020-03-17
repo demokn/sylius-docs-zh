@@ -11,7 +11,7 @@
   在产品创建期间，您可以决定其许多特征。它要多少钱？它是需要运输的物理产品吗？是否应该在库存系统中对其进行跟踪？
   在哪个频道上可以使用？结帐时是否应加一些税？稍后花点时间探索这些选项，现在让我们仅填充最关键的数据：
 
-  [[../_images/getting-started-with-sylius/product-creation.png]
+  [[../_images/getting-started-with-sylius/product-creation.png]]
 
 ** 总结
    太好了，第一阶段完成了！整个结帐过程在 [[file:../book/orders/checkout.org][文档的此部分]] 中进行了详细描述。

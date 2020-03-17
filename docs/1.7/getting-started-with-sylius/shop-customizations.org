@@ -1,0 +1,54 @@
+* 店铺定制
+  Sylius在其他电子商务系统中的独特之处不仅在于其高度发达的社区或简洁的代码库。
+  开发人员的经验一直是该平台的一大优势-它包括易于定制和出色的可扩展性。
+
+  让我们从这些功能中受益并进行一些简单的自定义，以使您的商店更加适合您的业务需求。
+
+** 商标(Logo)
+   你可以从商店面板开始。
+   默认模板简洁明了，但是可以肯定的是，您希望使它们对于您的在线商店而言是唯一的。
+   也许有些颜色应该不同？甚至整个产品页面看起来都不像您想要的？
+   幸运的是， =twig= 模板很容易覆写或自定义（有关更多信息，请 参见 [[file:../customization/template.org][自定义模板]] 一章）。
+
+   首先，请尝试一个非常简单但也是最关键的更改之一 —— 在Sylius徽标的位置显示你自己的商店徽标。
+
+   商店面板中的默认徽标：
+
+   [[../_images/getting-started-with-sylius/logo-before.png]]
+
+   第一步是检测哪个模板负责显示徽标，因此应该覆盖哪些模板以自定义徽标图像。
+
+   它放置在 *SyliusShopBundle* 的位置 =Resources/views/_header.html.twig.path= ，
+   因此要覆盖它，您应该创建 =templates/bundles/SyliusShopBundle/_header.html.twig= 文件并复制原始文件内容。
+   接下来，用指向徽标的链接或正确导入的资产图像替换 =img= 元素的指向（有关更多信息，请 参见 [[https://symfony.com/doc/current/best_practices/web-assets.html][Symfony assets]] 文档 ）。
+
+   #+begin_hint
+   为了加快学习速度，您只需将徽标文件放入 =public/assets/= 目录中。
+   请记住，不应将其提交到存储库中或放在服务器上，仅出于测试原因！
+   #+end_hint
+
+   自定义结束时，被覆盖的文件将类似于以下内容：
+
+   #+begin_src html
+     <div class="ui basic segment">
+         <div class="ui three column stackable grid">
+             <div class="column">
+                 <a href="{{ path('sylius_shop_homepage') }}"><img src="{{ asset('assets/logo.png') }}" alt="Logo" class="ui small image" /></a>
+             </div>
+             <div class="column">
+                 {{ sonata_block_render_event('sylius.shop.layout.header') }}
+             </div>
+             <div class="right aligned column">
+                 {{ render(url('sylius_shop_partial_cart_summary', {'template': '@SyliusShop/Cart/_widget.html.twig'})) }}
+             </div>
+         </div>
+     </div>
+   #+end_src
+
+   现在，商店面板顶部显示的应该是自定义的Logo了：
+
+   [[../_images/getting-started-with-sylius/logo-after.png]]
+
+   太棒了！您已经成功在Sylius中自定义了模板！
+   让我们进行一些更复杂但也更令人满意的工作
+   —— 将您自己的业务逻辑引入系统。
