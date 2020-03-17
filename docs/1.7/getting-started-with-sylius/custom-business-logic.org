@@ -1,0 +1,126 @@
+* 定制业务逻辑
+  模板定制只是Sylius中广泛的定制可能性的开始。
+  Sylius中很少有您无法自定义或覆盖的内容。
+  让我们看一下自定义Sylius默认逻辑的典型示例之一，在本例中，是与运送及其成本相关的逻辑。
+  现在是时候定制一个运输计算器了。
+
+** 定制运输计算器
+   每个运输计算器都可以计算所提供订单的运输成本。
+   该计算通常基于购买的产品和管理员进行的一些配置。
+   默认情况下，Sylius提供 =FlatRateCalculator= 和 =PerUnitRateCalculator= （它们的名称很容易解释），
+   但是有时还不够。
+   假设您的商店将订购的产品打包成包裹，您需要为每个产品向客户收费。
+
+   您应该从实现自定义运输计算器服务开始。
+   请记住，它必须实现 *Shipping Component* 下的 =CalculatorInterface= 。
+   让我们命名它 =ParcelCalculator= 并将其放置在 =src/ShippingCalculator= 目录中。
+
+   #+begin_src php
+     # src/ShippingCalculator/ParcelCalculator.php
+
+     <?php
+
+     declare(strict_types=1);
+
+     namespace App\ShippingCalculator;
+
+     use Sylius\Component\Shipping\Calculator\CalculatorInterface;
+     use Sylius\Component\Shipping\Model\ShipmentInterface;
+
+     final class ParcelCalculator implements CalculatorInterface
+     {
+         public function calculate(ShipmentInterface $subject, array $configuration): int
+         {
+             $parcelSize = $configuration['size'];
+             $parcelPrice = $configuration['price'];
+
+             $numberOfPackages = ceil($subject->getUnits()->count() / $parcelSize);
+
+             return (int) ($numberOfPackages * $parcelPrice);
+         }
+
+         public function getType(): string
+         {
+             return 'parcel';
+         }
+     }
+   #+end_src
+
+   要使其正常工作，还需要做两件事。
+   一种表单类型，用于将一些数据传递到计算器服务中的 =$configuration= 数组，
+   并在 =services.yaml= 文件中进行正确的服务注册。
+
+   #+begin_src php
+     # src/Form/Type/ParcelShippingCalculatorType.php
+
+     <?php
+
+     declare(strict_types=1);
+
+     namespace App\Form\Type;
+
+     use Sylius\Bundle\MoneyBundle\Form\Type\MoneyType;
+     use Symfony\Component\Form\AbstractType;
+     use Symfony\Component\Form\Extension\Core\Type\NumberType;
+     use Symfony\Component\Form\FormBuilderInterface;
+
+     final class ParcelShippingCalculatorType extends AbstractType
+     {
+         public function buildForm(FormBuilderInterface $builder, array $options): void
+         {
+             $builder
+                 ->add('size', NumberType::class)
+                 ->add('price', MoneyType::class, [
+                     'currency' => 'USD',
+                 ])
+             ;
+         }
+     }
+   #+end_src
+
+   #+begin_attention
+   这里对货币代码的硬编码仅出于测试原因。
+   在实际的应用程序中，您应该从存储库，上下文或某些配置文件中获取正确的货币代码。
+   #+end_attention
+
+   #+begin_src yaml
+     # config/services.yml
+
+     services:
+         //...
+
+         App\ShippingCalculator\ParcelCalculator:
+             tags:
+                 -
+                     {
+                         name: sylius.shipping_calculator,
+                         calculator: "parcel",
+                         label: "Parcel",
+                         form_type: App\Form\Type\ParcelShippingCalculatorType
+                     }
+   #+end_src
+
+   就是这样！现在，您应该能够在创建或编辑运输方法的时候选择你自己的运输计算器了。
+
+   [[../_images/getting-started-with-sylius/shipping-calculator.png]]
+
+   您还可以在结帐运送步骤中查看你的自定义结果，运费根据您购物车中有多少产品而变化。
+
+   对于1个产品：
+
+   [[../_images/getting-started-with-sylius/shipping-cost-1.png]]
+
+   对于4种产品：
+
+   [[../_images/getting-started-with-sylius/shipping-cost-2.png]]
+
+   太棒了！您刚刚向基于Sylius的系统提供了自己的逻辑。
+   因此，您的商店可以为客户提供独特的体验。
+   基于此知识，您已准备好进一步定制您的商店，并使其尽可能地适合您的业务需求。
+
+** 学习更多
+   - [[file:../customization/index.org][定制化]]
+   - [[file:../book/orders/shipments.org][运输]]
+   - [[file:../book/orders/checkout.org][结算]]
+   - [[file:../book/orders/orders.org][订单]]
+   - [[file:../book/orders/adjusments.org][调整]]
