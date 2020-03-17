@@ -1,0 +1,10 @@
+* 部署方式
+  开发通常花费大部分时间来执行项目，但是我们不应忘记此过程的最后一步 - 将应用程序部署到服务器中。
+  我们认为，它应该尽可能简单易懂。
+  您可以选择许多服务器来进行商店部署：在我们的文档中，您将找到简单的 Platform.sh 指南。
+
+  一探究竟！
+
+  #+begin_tip
+  [[file:../cookbook/deployment/platform-sh.org][如何将 Sylius 部署到Platform.sh？]]
+  #+end_tip

@@ -1,0 +1,16 @@
+* 总结
+  我们希望您在Sylius的旅途中过得愉快。
+  基于已经掌握的知识，您现在可以使用Sylius，对其进行自定义并使用您自己的代码或社区代码添加新的功能。
+
+  本教程末尾有一些建议：
+
+  - 如果您想提高对Sylius功能的了解，请看一下 [[file:../book/index.org][The Book]]
+  - 如果您有兴趣进行更多自定义，则应阅读 [[file:../customization/index.org][自定义指南]] 中的某些章节
+  - 如果您想与社区共享您的工作，请查看 [[file:../book/plugins/index.org][Sylius插件]] 一章
+
+  最重要的是 - 如果您想成为我们集体的一部分，请加入我们的 [[https://sylius.com/slack][Slack]]， [[https://forum.sylius.com/][论坛]] 并关注我们的 [[https://github.com/Sylius/Sylius][代码仓库]]，
+  以始终与最新的Sylius版本保持同步。
+  如果您有关于如何使Sylius变得更好的任何想法，想在技术上支持我们 - 请在 Github 上 open issues, pull requests， 加入讨论。
+  Sylius只有和社区一起才更强大：)
+
+  祝好运！
