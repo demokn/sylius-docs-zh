@@ -1,0 +1,28 @@
+* 插件安装
+  Sylius易于根据您的业务需求进行自定义，但并非所有的自定义都要由你自己实现！
+  Sylius支持创建插件，这是扩展其功能并与社区共享这些新功能的最佳方法。
+  您已经可以从我们（Sylius Core团队）或社区开发的一些插件中受益。
+  所有正式批准的插件都在我们的 [[https://sylius.com/plugins/][网站]] 上列出，但是在Sylius生态系统中甚至可以看到更多插件。
+
+  为了让您快速了解易用且功能强大的插件，让我们安装 *SyliusCmsPlugin* （由 *BitBag* 开发），这是Sylius最受欢迎的扩展之一。
+
+  插件的安装说明在 [[https://github.com/BitBagCommerce/SyliusCmsPlugin/blob/master/doc/installation.md][插件的文档]] 中进行了广泛的解释，
+  并包括标准步骤，您可以在大多数Sylius插件中看到这些步骤：
+
+  - 使用composer安装插件
+  - 配置（包括路由导入）
+  - 数据库更新
+  - 一些额外的步骤（在本插件的例子中，安装 *CKEditor* ）
+
+  安装后，您应该可以在商店中使用插件的功能：
+
+  [[../_images/getting-started-with-sylius/plugin-installed.png]]
+
+  使用插件是根据您的需求定制商店的最快方法之一。
+  我们在生态系统中已经有很多插件，并且它们的数量正在增长，因此请记住在自己实现之前先检查现有解决方案。
+  无需重新发明轮子：)
+
+** 学习更多
+   - [[file:../book/plugins/index.org][插件]]
+   - [[file:../plugin-development-guide/index.org][插件开发指南]]
+   - [[file:../book/plugins/official-plugins.org][官方插件]]
